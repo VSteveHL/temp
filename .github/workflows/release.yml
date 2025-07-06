@@ -1,0 +1,22 @@
+name: Release Workflow
+
+# 触发条件：每次 push 到 main 分支时触发
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 检出代码
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 创建 Release
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: hello.txt
