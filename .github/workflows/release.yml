@@ -22,3 +22,9 @@ jobs:
           name: Automated Build Release
           tag_name: automated_build
           files: hello.txt
+          body: |
+            This is an automated release of Scheme LangServer.
+
+            **Commit:** ${{ github.sha }}
+            **Branch:** ${{ github.ref_name }}
+            **Pipeline Run:** ${{ github.run_id }}
