@@ -21,5 +21,4 @@ jobs:
         with:
           name: Automated Build Release
           tag_name: automated_build
-          token: ${{ secrets.GITHUB_TOKEN }}
           files: hello.txt
