@@ -19,8 +19,8 @@ jobs:
       - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
-          name: Scheme LangServer Auto-generated Build - ${{  github.sha  }}
-          tag_name: automated_build
+          name: Scheme LangServer Auto-generated Build
+          tag_name: automated_build-${{ github.run_number }}
           files: hello.txt
           body: |
             This is an automated release of Scheme LangServer.
